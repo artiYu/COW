@@ -3,9 +3,9 @@
 #include <string>
 
 
-NewString::CountReferences::CountReferences (const char* str) {
-	sz = new char[strlen(str) + 1];
-	strcpy (sz, str); 
+NewString::CountReferences::CountReferences (const char* sz_) {
+	sz = new char[strlen(sz_) + 1];
+	strcpy (sz, sz_); 
 	count = 1;              
 }
 
@@ -13,12 +13,12 @@ NewString::CountReferences::~CountReferences () {
 	delete[] sz; 
 }       
 
-NewString::NewString (const char* str) { 
-	pCountRef = new CountReferences (str); 
+NewString::NewString (const char* sz) { 
+	pCountRef = new CountReferences (sz); 
 }
 
-NewString::NewString (const NewString &NS) {
-	pCountRef = NS.pCountRef;
+NewString::NewString (const NewString &ns) {
+	pCountRef = ns.pCountRef;
 	pCountRef->count++;
 }
 
@@ -66,28 +66,25 @@ NewString::operator const char * () const {
 
 void NewString::operator += (const NewString &ns) {
 	resize (strlen (pCountRef->sz) + strlen (ns.pCountRef->sz) + 1);
+	if (pCountRef->count > 1) {
+		CountReferences *new_ref = new CountReferences (pCountRef->sz);
+		--pCountRef->count;
+		pCountRef = new_ref;
+	}
 	strcat (pCountRef->sz, ns.pCountRef->sz);
 }
 
-NewString NewString::operator + (const NewString &ns) {
-	NewString temp;
-	temp += pCountRef->sz;
-	temp += ns.pCountRef->sz;
-	return temp;
 
-}
-
-NewString operator + (const char *str, const NewString &ns1) {
-	NewString ns;
-	ns += str;
+NewString operator + (const char *sz, const NewString &ns1) {
+	NewString ns (sz);
 	ns += ns1;
 	return ns;
 }
 
 std::istream &operator >> (std::istream &in, NewString &ns) {
-	std::string str;
-	in >> str;
-	ns = str.c_str();
+	std::string sz;
+	in >> sz;
+	ns = sz.c_str();
 	return in;
 }
 

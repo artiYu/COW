@@ -17,7 +17,6 @@ class NewString {
 		const NewString& operator = (const NewString &);
 		
 		void operator += (const NewString &);
-		NewString operator + (const NewString &);
 		friend NewString operator + (const char *, const NewString &);
 		
 		char& operator[] (int);

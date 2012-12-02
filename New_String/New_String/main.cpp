@@ -38,6 +38,8 @@ TEST (FifthTest, CheckSomeArithmeticOperations) {
 	s4 = s1 + s2;
 	s5 = s4 + "4";
 	s6 = "5" + s5;
+	EXPECT_STREQ ("1", s1);
+	EXPECT_STREQ ("2", s2);
 	EXPECT_STREQ ("31", s3);
 	EXPECT_STREQ ("12", s4);
 	EXPECT_STREQ ("124", s5);
