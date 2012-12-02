@@ -1,0 +1,59 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:main.cpp" caret="1276" fromTop="22" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.h" caret="8" fromTop="0" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.cpp" caret="4" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.cpp" caret="1805" fromTop="12" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.cpp" caret="744" fromTop="0" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.cpp" caret="186" fromTop="0" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.cpp" caret="8" fromTop="0" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.cpp" caret="1145" fromTop="5" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.cpp" caret="1484" fromTop="6" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.cpp" caret="1979" fromTop="3" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.h" caret="676" fromTop="16" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.cpp" caret="2081" fromTop="10" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:main.cpp" caret="73" fromTop="2" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.cpp" caret="996" fromTop="11" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:main.cpp" caret="1276" fromTop="24" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:main.cpp" caret="1276" fromTop="20" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:main.cpp" caret="1276" fromTop="20" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.cpp" caret="1927" fromTop="12" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.h" caret="396" fromTop="3" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.cpp" caret="1807" fromTop="19" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:main.cpp" caret="1276" fromTop="24" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.cpp" caret="1927" fromTop="15" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.cpp" caret="1890" fromTop="15" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.cpp" caret="1729" fromTop="6" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.cpp" caret="1093" fromTop="9" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.cpp" caret="825" fromTop="9" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:NewString.h" caret="556" fromTop="7" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:main.cpp" caret="1276" fromTop="25" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:main.cpp" caret="1276" fromTop="26" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:main.cpp" caret="1120" fromTop="26" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:main.cpp" caret="1115" fromTop="26" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:main.cpp" caret="1144" fromTop="19" />
+      <File id="D22F38A0-08B6-4272-A4F5-2DE26C999BD8/f:main.cpp" caret="577" fromTop="4" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>
