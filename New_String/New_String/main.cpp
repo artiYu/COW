@@ -46,6 +46,20 @@ TEST (FifthTest, CheckSomeArithmeticOperations) {
 	EXPECT_STREQ ("5124", s6);
 }
 
+TEST (SixthTest, CheckForMathingFieldsSum) {
+	NewString s1 = "Opa", s2;
+	s1 += s1;
+	s2 += s2;
+	EXPECT_STREQ ("OpaOpa", s1);
+	EXPECT_STREQ ("", s2);
+}
+
+TEST (SeventhTest, CheckForMathingFieldsAssignment) {
+	NewString s1 = "Perpetuum mobile";
+	s1 = s1;
+	EXPECT_STREQ ("Perpetuum mobile", s1);
+}
+
 GTEST_API_ int main(int argc, char **argv) {
 	testing::InitGoogleTest(&argc, argv);
 	return RUN_ALL_TESTS(); 

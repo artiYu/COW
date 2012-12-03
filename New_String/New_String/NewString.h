@@ -16,14 +16,14 @@ class NewString {
 		~NewString ();
 		const NewString& operator = (const NewString &);
 		
-		void operator += (const NewString &);
+		void operator += (const char *);
 		friend NewString operator + (const char *, const NewString &);
 		
 		char& operator[] (int);
 		const char operator[] (int) const;
 		operator const char* () const;
 		operator NewString* () const;
-		void resize (int);
+
 		friend std::istream& operator >> (std::istream &, NewString &);
 		friend std::ostream& operator << (std::ostream &, const NewString &);
 

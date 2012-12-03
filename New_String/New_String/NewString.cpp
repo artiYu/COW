@@ -29,14 +29,10 @@ NewString::~NewString () {
 		pCountRef->count--;       
 }
 
-void NewString::resize (int newLen) {
-	char *new_sz = new char [newLen];
-	strcpy (new_sz, pCountRef->sz);
-	delete [] pCountRef->sz;
-	pCountRef->sz = new_sz;
-}
-
 const NewString& NewString::operator = (const NewString &ns) {
+	if (pCountRef == ns.pCountRef) 
+		return *this;
+
 	if (pCountRef->count == 1)        
 		delete pCountRef;         
 	else  
@@ -64,14 +60,18 @@ NewString::operator const char * () const {
 	return pCountRef->sz;
 }
 
-void NewString::operator += (const NewString &ns) {
-	resize (strlen (pCountRef->sz) + strlen (ns.pCountRef->sz) + 1);
+void NewString::operator += (const char *_sz) {
 	if (pCountRef->count > 1) {
 		CountReferences *new_ref = new CountReferences (pCountRef->sz);
 		--pCountRef->count;
 		pCountRef = new_ref;
 	}
-	strcat (pCountRef->sz, ns.pCountRef->sz);
+	
+	char *new_sz = new char [strlen (pCountRef->sz) + strlen (_sz) + 1];
+	strcpy (new_sz, pCountRef->sz);
+	pCountRef->sz = new_sz;
+
+	strcat (pCountRef->sz, _sz);
 }
 
 
