@@ -29,7 +29,7 @@ NewString::~NewString () {
 		pCountRef->count--;       
 }
 
-const NewString& NewString::operator = (const NewString &ns) {
+const NewString& NewString::operator = (const NewString& ns) {
 	if (pCountRef == ns.pCountRef) 
 		return *this;
 
@@ -70,6 +70,8 @@ void NewString::operator += (const char *_sz) {
 	char *new_sz = new char [strlen (pCountRef->sz) + strlen (_sz) + 1];
 	strcpy (new_sz, pCountRef->sz);
 	pCountRef->sz = new_sz;
+	new_sz = nullptr;
+	delete new_sz;
 
 	strcat (pCountRef->sz, _sz);
 }

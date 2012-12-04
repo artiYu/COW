@@ -4,7 +4,7 @@
 class NewString {    
 	class  CountReferences {                                
 		public:
-			CountReferences (const char *);
+			CountReferences (const char *sz);
 			~CountReferences ();
 			int count;               
 			char* sz;
@@ -12,20 +12,20 @@ class NewString {
 
 	public:
 		NewString (const char *str = "");
-		NewString (const NewString &);
+		NewString (const NewString &ns);
 		~NewString ();
-		const NewString& operator = (const NewString &);
+		const NewString& operator = (const NewString &ns);
 		
-		void operator += (const char *);
-		friend NewString operator + (const char *, const NewString &);
+		void operator += (const char *sz);
+		friend NewString operator + (const char *, const NewString &ns);
 		
-		char& operator[] (int);
-		const char operator[] (int) const;
+		char& operator[] (int index);
+		const char operator[] (int index) const;
 		operator const char* () const;
 		operator NewString* () const;
 
-		friend std::istream& operator >> (std::istream &, NewString &);
-		friend std::ostream& operator << (std::ostream &, const NewString &);
+		friend std::istream& operator >> (std::istream &in, NewString &ns);
+		friend std::ostream& operator << (std::ostream &out, const NewString &ns);
 
 	private:
 		CountReferences* pCountRef;
