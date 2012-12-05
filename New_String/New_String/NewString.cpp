@@ -68,11 +68,11 @@ void NewString::operator += (const char *_sz) {
 	}
 	
 	char *new_sz = new char [strlen (pCountRef->sz) + strlen (_sz) + 1];
-	strcpy (new_sz, pCountRef->sz);
-	delete[] pCountRef->sz;
 
+	strcpy (new_sz, pCountRef->sz);
+	strcat (new_sz, _sz);
+	delete[] pCountRef->sz;
 	pCountRef->sz = new_sz;
-	strcat (pCountRef->sz, _sz);
 }
 
 
