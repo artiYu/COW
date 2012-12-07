@@ -76,10 +76,10 @@
   <ItemGroup>
     <ClCompile Include="gtest-all.cc" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="NewString.cpp" />
+    <ClCompile Include="CWString.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="NewString.h" />
+    <ClInclude Include="CWString.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

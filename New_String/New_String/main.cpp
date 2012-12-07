@@ -1,24 +1,29 @@
-#include "NewString.h"
+/*
+* © Yuliya S. Artishevskaya
+* e-mail: lapl4rt@gmail.com
+*/
+
+#include "CWString.h"
 #include "gtest\gtest.h"
 #include <iostream>
 
 TEST (FirstTest, CreateStringsWithVariousConstructors) {
-	NewString s1 = "Perpetuum mobile";
-	NewString s2 (s1);
+	CWString s1 = "Perpetuum mobile";
+	CWString s2 (s1);
 	EXPECT_STREQ ("Perpetuum mobile", s2);
 }
 
 TEST (SecondTest, MuteStringBySquareBracketsIfOneReference) {
-	NewString s1 = "Perpetuum mobile";
+	CWString s1 = "Perpetuum mobile";
 	for (int i = 0; i < 10; ++i)
 		s1[i] = 'Y';
 	EXPECT_STREQ ("YYYYYYYYYYmobile", s1);
 }
 
 TEST (ThirdTest, MuteStringBySquareBracketsIfMoreThanOneReference) {
-	NewString s1 = "Perpetuum mobile";
-	NewString s2 = s1;
-	NewString s3 (s1);
+	CWString s1 = "Perpetuum mobile";
+	CWString s2 = s1;
+	CWString s3 (s1);
 	for (int i = 0; i < 10; ++i) 
 		s3[i] = 'Y';
 	EXPECT_STREQ ("YYYYYYYYYYmobile", s3);
@@ -27,13 +32,13 @@ TEST (ThirdTest, MuteStringBySquareBracketsIfMoreThanOneReference) {
 }
 
 TEST (ForthTest, CheckOfOperationSquareBrackets) {
-	NewString s1 = "Perpetuum mobile";
+	CWString s1 = "Perpetuum mobile";
 	EXPECT_EQ ('P', s1[0]);
 }
 
 
 TEST (FifthTest, CheckSomeArithmeticOperations) {
-	NewString s1 = "1", s2 = "2", s3 = "3", s4, s5, s6;
+	CWString s1 = "1", s2 = "2", s3 = "3", s4, s5, s6;
 	s3 += s1;
 	s4 = s1 + s2;
 	s5 = s4 + "4";
@@ -47,7 +52,7 @@ TEST (FifthTest, CheckSomeArithmeticOperations) {
 }
 
 TEST (SixthTest, CheckForMathingFieldsSum) {
-	NewString s1 = "Opa", s2;
+	CWString s1 = "Opa", s2;
 	s1 += s1;
 	s2 += s2;
 	EXPECT_STREQ ("OpaOpa", s1);
@@ -55,7 +60,7 @@ TEST (SixthTest, CheckForMathingFieldsSum) {
 }
 
 TEST (SeventhTest, CheckForMathingFieldsAssignment) {
-	NewString s1 = "Perpetuum mobile";
+	CWString s1 = "Perpetuum mobile";
 	s1 = s1;
 	EXPECT_STREQ ("Perpetuum mobile", s1);
 }

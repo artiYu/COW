@@ -1,4 +1,4 @@
 COW
 ===
 
-COW-Strings
+Copy-On-Write Strings
